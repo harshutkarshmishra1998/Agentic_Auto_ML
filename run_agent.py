@@ -2,10 +2,11 @@ from agent_state import AgentState
 from cleaning.langgraph_node import cleaning_node
 
 
-def run_agent(file_path: str):
+def run_agent(file_path: str, target_column: str | None = None):
 
     state: AgentState = {
-        "file_path": file_path
+        "file_path": file_path,
+        "target_column": target_column
     }
 
     state = cleaning_node(state)
@@ -13,5 +14,20 @@ def run_agent(file_path: str):
 
 
 if __name__ == "__main__":
-    result = run_agent("data/sample.csv")
-    print(result["metadata"]) #type: ignore
+
+    result = run_agent("uploaded_files/churn/data.csv", "CustomerChurned")
+
+    print("\nDATASET ID:")
+    print(result["dataset_id"]) #type: ignore
+
+    print("\nCLEANED FILE:")
+    print(result["cleaned_file_path"]) #type: ignore
+
+    print("\nMETADATA FILE:")
+    print(result["metadata_file_path"]) #type: ignore
+
+    print("\nPOST CLEAN REPORT:")
+    print(result["post_clean_report"]) #type: ignore
+
+    print("\nMETADATA SUMMARY:")
+    print(result["metadata"].keys()) #type: ignore

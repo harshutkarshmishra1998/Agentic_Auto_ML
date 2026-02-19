@@ -13,11 +13,11 @@ pytest>=8.2.0
 openml>=0.14.2
 
 # # Phase 2
-# scipy>=1.11.0
-# statsmodels>=0.14.0
-# category-encoders>=2.6.3
-# feature-engine>=1.7.0
-# imbalanced-learn>=0.12.0
+scipy>=1.11.0
+statsmodels>=0.14.0
+category-encoders>=2.6.3
+feature-engine>=1.7.0
+imbalanced-learn>=0.12.0
 
 # # Phase 3
 # xgboost>=2.0.0
