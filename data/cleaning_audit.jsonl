@@ -1,7 +1,99 @@
-{"time": "2026-02-19T18:25:31.306357", "dataset_id": "d5c703ec", "step": "dataset_loaded", "details": {"file": "data.csv"}}
-{"time": "2026-02-19T18:25:31.593059", "dataset_id": "d5c703ec", "step": "unified_diagnostics_completed", "details": {"auto_fixable": 0, "policy_required": 14, "informational": 2}}
-{"time": "2026-02-19T18:25:31.626708", "dataset_id": "d5c703ec", "step": "pre_clean_completed", "details": {"steps": 0}}
-{"time": "2026-02-19T18:25:31.677018", "dataset_id": "d5c703ec", "step": "cleaned_dataset_saved", "details": {"path": "data\\data_cleaned_d5c703ec.csv"}}
-{"time": "2026-02-19T18:25:31.693516", "dataset_id": "d5c703ec", "step": "post_clean_completed", "details": {"remaining_missing": 0.0, "n_features": 20, "mean_variance": 688.5024983975454}}
-{"time": "2026-02-19T18:25:31.726554", "dataset_id": "d5c703ec", "step": "metadata_generated", "details": {"policy_flags": 14, "info_flags": 2}}
-{"time": "2026-02-19T18:25:31.726554", "dataset_id": "d5c703ec", "step": "metadata_saved", "details": {"path": "data\\data_metdata.jsonl"}}
+{"time": "2026-02-19T20:31:20.467052", "dataset_id": "3c0326a6", "step": "dataset_loaded", "details": {"file": "data.csv"}}
+{"time": "2026-02-19T20:33:12.741667", "dataset_id": "3c0326a6", "step": "dataset_loaded", "details": {"file": "data.csv"}}
+{"time": "2026-02-19T20:33:19.380544", "dataset_id": "3c0326a6", "step": "unified_diagnostics_completed", "details": {"auto_fixable": 34, "policy_required": 1, "informational": 1}}
+{"time": "2026-02-19T20:33:19.380544", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": null, "action": "drop_duplicate_rows", "error": "Unknown action: drop_duplicate_rows"}}
+{"time": "2026-02-19T20:33:19.380544", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "severe_toxicity", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.380544", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "obscene", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.380544", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "identity_attack", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.395776", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "threat", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.396548", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "asian", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "atheist", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "bisexual", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "black", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "buddhist", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "heterosexual", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "hindu", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "homosexual_gay_or_lesbian", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "intellectual_or_learning_disability", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "jewish", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "latino", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "muslim", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "other_disability", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "other_gender", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "other_race_or_ethnicity", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "other_religion", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "other_sexual_orientation", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "physical_disability", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "psychiatric_or_mental_illness", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "transgender", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "white", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "funny", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "wow", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "sad", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "likes", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "disagree", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.397258", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "sexual_explicit", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.412480", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "identity_annotator_count", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.413150", "dataset_id": "3c0326a6", "step": "action_failed", "details": {"column": "toxicity_annotator_count", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-19T20:33:19.414037", "dataset_id": "3c0326a6", "step": "auto_fix_cleaning_executed", "details": {"actions": 34}}
+{"time": "2026-02-19T20:33:20.210758", "dataset_id": "3c0326a6", "step": "pre_clean_completed", "details": {"steps": 56}}
+{"time": "2026-02-19T20:33:20.214753", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "asian", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.217749", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "atheist", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.219749", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "bisexual", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.221751", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "black", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.223751", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "buddhist", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.223751", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "christian", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.223751", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "female", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.230466", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "heterosexual", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.230466", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "hindu", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.230466", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "homosexual_gay_or_lesbian", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.230466", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "intellectual_or_learning_disability", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.230466", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "jewish", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.230466", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "latino", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.230466", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "male", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.245018", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "muslim", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.248386", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "other_disability", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.251381", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "other_gender", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.253380", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "other_race_or_ethnicity", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.257094", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "other_religion", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.260684", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "other_sexual_orientation", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.264003", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "physical_disability", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.266013", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "psychiatric_or_mental_illness", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.269012", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "transgender", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.273112", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "white", "action": "drop_feature"}}
+{"time": "2026-02-19T20:33:20.497272", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "severe_toxicity", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:20.575963", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "obscene", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:20.654020", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "identity_attack", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:20.771847", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "insult", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.014036", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "threat", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.014036", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "asian", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.018841", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "atheist", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.018841", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "bisexual", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.018841", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "black", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.018841", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "buddhist", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.018841", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "christian", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.018841", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "female", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.018841", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "heterosexual", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.018841", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "hindu", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.018841", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "homosexual_gay_or_lesbian", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.018841", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "intellectual_or_learning_disability", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.029676", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "jewish", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.030695", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "latino", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.030695", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "male", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.030695", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "muslim", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.030695", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "other_disability", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.030695", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "other_gender", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.030695", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "other_race_or_ethnicity", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.030695", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "other_religion", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.030695", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "other_sexual_orientation", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.030695", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "physical_disability", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.030695", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "psychiatric_or_mental_illness", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.030695", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "transgender", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.030695", "dataset_id": "3c0326a6", "step": "action_skipped", "details": {"reason": "column_missing_after_previous_transform", "column": "white", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.285783", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "likes", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.486079", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "sexual_explicit", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:21.630194", "dataset_id": "3c0326a6", "step": "clean_action", "details": {"column": "toxicity_annotator_count", "action": "apply_power_transform"}}
+{"time": "2026-02-19T20:33:24.782240", "dataset_id": "3c0326a6", "step": "cleaned_dataset_saved", "details": {"path": "data\\data_cleaned_3c0326a6.csv"}}
+{"time": "2026-02-19T20:33:24.786517", "dataset_id": "3c0326a6", "step": "post_clean_completed", "details": {"remaining_missing": 5.882352941176471e-07, "n_features": 17, "mean_variance": 13.970880948702348}}
+{"time": "2026-02-19T20:33:25.333449", "dataset_id": "3c0326a6", "step": "metadata_generated", "details": {"policy_flags": 1, "info_flags": 1}}
+{"time": "2026-02-19T20:33:25.333449", "dataset_id": "3c0326a6", "step": "metadata_saved", "details": {"path": "data\\data_metdata.jsonl"}}

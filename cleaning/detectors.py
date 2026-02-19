@@ -92,23 +92,68 @@ def detect_class_imbalance(df, target):
     return []
 
 
+# def detect_multicollinearity(df):
+#     num = df.select_dtypes(include=np.number)
+#     if num.shape[1] < 2:
+#         return []
+
+#     vif_data = []
+#     for i in range(num.shape[1]):
+#         vif = variance_inflation_factor(num.values, i)
+#         if vif > 10:
+#             vif_data.append(DiagnosticResult(
+#                 "multicollinearity_index",
+#                 num.columns[i],
+#                 float(vif),
+#                 "high",
+#                 policy_required=True
+#             ))
+#     return vif_data
+
 def detect_multicollinearity(df):
+
     num = df.select_dtypes(include=np.number)
+
+    # ---------- not enough numeric features ----------
     if num.shape[1] < 2:
         return []
 
-    vif_data = []
-    for i in range(num.shape[1]):
-        vif = variance_inflation_factor(num.values, i)
-        if vif > 10:
-            vif_data.append(DiagnosticResult(
-                "multicollinearity_index",
-                num.columns[i],
-                float(vif),
-                "high",
-                policy_required=True
-            ))
-    return vif_data
+    # ---------- remove problematic values ----------
+    num = num.replace([np.inf, -np.inf], np.nan)
+
+    # drop rows with any NaN (VIF requires complete cases)
+    num = num.dropna()
+
+    # if too few rows remain, skip
+    if len(num) < 10:
+        return []
+
+    # ---------- remove constant columns ----------
+    num = num.loc[:, num.nunique() > 1]
+
+    if num.shape[1] < 2:
+        return []
+
+    # ---------- compute VIF safely ----------
+    results = []
+
+    try:
+        for i in range(num.shape[1]):
+            vif = variance_inflation_factor(num.values, i)
+
+            if np.isfinite(vif) and vif > 10:
+                results.append(DiagnosticResult(
+                    detector="multicollinearity_index",
+                    column=num.columns[i],
+                    value=float(vif),
+                    severity="high",
+                    policy_required=True
+                ))
+    except Exception:
+        # never crash diagnostics
+        return []
+
+    return results
 
 
 def detect_high_feature_to_sample_ratio(df):
