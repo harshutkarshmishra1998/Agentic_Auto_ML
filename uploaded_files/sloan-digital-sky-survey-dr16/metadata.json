@@ -1,0 +1,27 @@
+{
+  "dataset_id":43455,
+  "name":"Sloan-Digital-Sky-Survey-DR16",
+  "target":null,
+  "n_rows":100000,
+  "n_features":18,
+  "categorical_features":[
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ]
+}
