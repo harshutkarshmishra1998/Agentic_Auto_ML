@@ -1,23 +1,30 @@
 import pandas as pd
 import numpy as np
 
+from .metadata import infer_feature_roles
 
-# ---------- PRE CLEAN DIAGNOSTICS ----------
 
-def pre_clean_checks(df: pd.DataFrame):
+# --------------------------------------------------
+# PRE CLEAN
+# --------------------------------------------------
+
+def pre_clean_checks(df: pd.DataFrame, target=None):
+
     report = []
 
-    # missing values
-    for col in df.columns:
-        ratio = df[col].isna().mean()
+    roles = infer_feature_roles(df, target)
+    numeric_cols = roles["numeric"]
 
+    # ---------- missing ----------
+    for col in df.columns:
+
+        ratio = df[col].isna().mean()
         if ratio == 0:
             continue
 
         action = (
             "drop_feature" if ratio >= 0.40
-            else "impute_numeric_median"
-            if pd.api.types.is_numeric_dtype(df[col])
+            else "impute_numeric_median" if col in numeric_cols
             else None
         )
 
@@ -28,18 +35,23 @@ def pre_clean_checks(df: pd.DataFrame):
                 "missing_ratio": float(ratio)
             })
 
-    # skew detection
-    for col in df.select_dtypes(include=np.number):
-        if abs(df[col].skew()) > 2: #type: ignore
+    # ---------- skew ONLY TRUE NUMERIC ----------
+    for col in numeric_cols:
+
+        skew_val = df[col].skew()
+        if abs(skew_val) > 2:
             report.append({
                 "column": col,
-                "action": "apply_power_transform"
+                "action": "apply_power_transform",
+                "skew": float(skew_val)
             })
 
     return report
 
 
-# ---------- POST CLEAN VALIDATION ----------
+# --------------------------------------------------
+# POST CLEAN
+# --------------------------------------------------
 
 def post_clean_checks(df: pd.DataFrame):
     return {
