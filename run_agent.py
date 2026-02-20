@@ -2,6 +2,7 @@ from langgraph.graph import StateGraph, END
 
 from agent_state import AgentState
 from schema_engine.langgraph_node import schema_inference_node
+from data_understanding.langgraph_node import data_understanding_node
 
 from tests.schema_mapping import extract_schema
 from tests.json_printer import print_last_n_role_constants
@@ -17,6 +18,7 @@ if target:
 else:
     print("TARGET_COLUMN = null")
 
+
 # --------------------------------------------------
 # BUILD GRAPH
 # --------------------------------------------------
@@ -25,9 +27,12 @@ def build_graph():
     builder = StateGraph(AgentState)
 
     builder.add_node("schema_inference", schema_inference_node)
+    builder.add_node("data_understanding", data_understanding_node)
 
     builder.set_entry_point("schema_inference")
-    builder.add_edge("schema_inference", END)
+
+    builder.add_edge("schema_inference", "data_understanding")
+    builder.add_edge("data_understanding", END)
 
     return builder.compile()
 
@@ -48,4 +53,7 @@ if __name__ == "__main__":
     result = graph.invoke(initial_state)
 
     print("\n=== FINAL STATE ===\n")
+    print(result)
+
+    print("\n=== LAST CLASSIFICATION ===\n")
     print_last_n_role_constants("data/data_classification.jsonl", n=1)

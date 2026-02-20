@@ -13,3 +13,4 @@ class AgentState(TypedDict, total=False):
 
     # -------- outputs --------
     schema_result: Optional[Dict[str, Any]]
+    data_understanding_result: Optional[Dict[str, Any]]
