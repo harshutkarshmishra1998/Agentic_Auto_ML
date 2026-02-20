@@ -1,0 +1,51 @@
+from langgraph.graph import StateGraph, END
+
+from agent_state import AgentState
+from schema_engine.langgraph_node import schema_inference_node
+
+from tests.schema_mapping import extract_schema
+from tests.json_printer import print_last_n_role_constants
+
+METADATA_FILE = "uploaded_files/traffic_violations_100k/metadata.json"
+DATA_FILE = "uploaded_files/traffic_violations_100k/data.csv"
+
+cats, target = extract_schema(METADATA_FILE, DATA_FILE)
+
+print("CATEGORICAL_COLUMNS = ", cats)
+if target:
+    print(f'TARGET_COLUMN = "{target}"')
+else:
+    print("TARGET_COLUMN = null")
+
+# --------------------------------------------------
+# BUILD GRAPH
+# --------------------------------------------------
+def build_graph():
+
+    builder = StateGraph(AgentState)
+
+    builder.add_node("schema_inference", schema_inference_node)
+
+    builder.set_entry_point("schema_inference")
+    builder.add_edge("schema_inference", END)
+
+    return builder.compile()
+
+
+# --------------------------------------------------
+# RUN
+# --------------------------------------------------
+if __name__ == "__main__":
+
+    graph = build_graph()
+
+    initial_state: AgentState = {
+        "data_path": DATA_FILE,
+        "categorical_columns": cats,
+        "target_column": target,
+    }
+
+    result = graph.invoke(initial_state)
+
+    print("\n=== FINAL STATE ===\n")
+    print_last_n_role_constants("data/data_classification.jsonl", n=1)

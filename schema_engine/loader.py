@@ -19,10 +19,16 @@ def _read_excel_any(path: Path):
 
 def _read_csv_robust(path: Path):
     try:
-        return pd.read_csv(path)
+        df = pd.read_csv(path)
+        df = df.dropna(axis=1, how="all")
+        df.columns = df.columns.str.strip()
+        return df
     except Exception:
         try:
-            return pd.read_csv(path, sep=None, engine="python")
+            df = pd.read_csv(path, sep=None, engine="python")
+            df = df.dropna(axis=1, how="all")
+            df.columns = df.columns.str.strip()
+            return df
         except Exception:
             return pd.read_csv(path, encoding="latin1")
 
