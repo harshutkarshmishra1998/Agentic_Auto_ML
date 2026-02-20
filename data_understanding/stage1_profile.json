@@ -1,0 +1,31 @@
+{
+  "target_candidates": [
+    "accident",
+    "belts",
+    "personal_injury",
+    "property_damage",
+    "fatal",
+    "commercial_license",
+    "hazmat",
+    "commercial_vehicle",
+    "alcohol",
+    "work_zone",
+    "contributed_to_accident",
+    "Unnamed: 28",
+    "date",
+    "time",
+    "description",
+    "vehicletype",
+    "year",
+    "make",
+    "model",
+    "color",
+    "violation_type",
+    "race",
+    "gender",
+    "driver_state",
+    "dl_state"
+  ],
+  "primary_target": "accident",
+  "leakage": {}
+}

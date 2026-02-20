@@ -1,0 +1,21 @@
+Column Name,Technical Type,Semantic Type,Role,Cardinality Level,Missing %,Missing Pattern,Distribution Shape,Outliers Present,Unique Ratio,Encoding Needed,Time Dependent,Unit / Scale,Text Complexity,Category Imbalance,Correlated With Others,Transform Hint,Modeling Hint,Data Quality Issues
+state,int64,numeric continuous,feature,low,0.0,none,symmetric,no,0.0102,scale,no,unknown,none,N/A,low,none,scaling_required,duplicates present
+account_length,int64,numeric continuous,feature,low,0.0,none,symmetric,yes,0.0436,scale,no,unknown,none,N/A,low,none,scaling_required,duplicates present
+area_code,float64,numeric discrete,feature,low,0.0,none,right skewed,yes,0.0006,no,no,unknown,none,low,low,log_transform_candidate,scaling_required,duplicates present
+international_plan,int64,numeric discrete,feature,low,0.0,none,right skewed,yes,0.0004,no,no,unknown,none,high,low,log_transform_candidate,scaling_required,duplicates present
+voice_mail_plan,int64,numeric discrete,feature,low,0.0,none,right skewed,no,0.0004,no,no,unknown,none,moderate,strong,log_transform_candidate,scaling_required,duplicates present
+number_vmail_messages,int64,numeric continuous,feature,low,0.0,none,right skewed,yes,0.0096,scale,no,unknown,none,N/A,strong,log_transform_candidate,scaling_required,duplicates present
+total_day_minutes,float64,numeric continuous,feature,high,0.0,none,symmetric,yes,0.3922,scale,no,unknown,none,N/A,strong,none,scaling_required,duplicates present
+total_day_calls,int64,numeric continuous,feature,low,0.0,none,symmetric,yes,0.0246,scale,no,unknown,none,N/A,low,none,scaling_required,duplicates present
+total_day_charge,float64,numeric continuous,feature,high,0.0,none,symmetric,yes,0.3922,scale,no,unknown,none,N/A,strong,none,scaling_required,duplicates present
+total_eve_minutes,float64,numeric continuous,feature,high,0.0,none,symmetric,yes,0.3758,scale,no,unknown,none,N/A,strong,none,scaling_required,duplicates present
+total_eve_calls,int64,numeric continuous,feature,low,0.0,none,symmetric,yes,0.0252,scale,no,unknown,none,N/A,low,none,scaling_required,duplicates present
+total_eve_charge,float64,numeric continuous,feature,high,0.0,none,symmetric,yes,0.3318,scale,no,unknown,none,N/A,strong,none,scaling_required,duplicates present
+total_night_minutes,float64,numeric continuous,feature,high,0.0,none,symmetric,yes,0.3706,scale,no,unknown,none,N/A,strong,none,scaling_required,duplicates present
+total_night_calls,int64,numeric continuous,feature,low,0.0,none,symmetric,yes,0.0262,scale,no,unknown,none,N/A,low,none,scaling_required,duplicates present
+total_night_charge,float64,numeric continuous,feature,medium,0.0,none,symmetric,yes,0.2056,scale,no,unknown,none,N/A,strong,none,scaling_required,duplicates present
+total_intl_minutes,float64,numeric continuous,feature,low,0.0,none,symmetric,yes,0.034,scale,no,unknown,none,N/A,strong,none,scaling_required,duplicates present
+total_intl_calls,int64,numeric continuous,feature,low,0.0,none,right skewed,yes,0.0042,scale,no,unknown,none,N/A,low,log_transform_candidate,scaling_required,duplicates present
+total_intl_charge,float64,numeric continuous,feature,low,0.0,none,symmetric,yes,0.034,scale,no,unknown,none,N/A,strong,none,scaling_required,duplicates present
+number_customer_service_calls,int64,numeric discrete,feature,low,0.0,none,right skewed,yes,0.002,no,no,unknown,none,low,low,log_transform_candidate,scaling_required,duplicates present
+CustomerChurned,str,unknown,feature,low,0.0,none,N/A,no,0.0004,no,no,unknown,none,high,unknown,none,none,duplicates present
