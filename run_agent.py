@@ -15,7 +15,7 @@ def run_agent(file_path: str, target_column: str | None = None):
 
 if __name__ == "__main__":
 
-    result = run_agent("uploaded_files/churn/data.csv", "CustomerChurned")
+    result = run_agent("uploaded_files/absenteeism-data.csv", "Absenteeism Time in Hours")
 
     print("\nDATASET ID:")
     print(result["dataset_id"]) #type: ignore

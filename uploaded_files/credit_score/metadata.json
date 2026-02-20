@@ -1,0 +1,30 @@
+{
+  "dataset_id":46506,
+  "name":"Credit_Score",
+  "target":"Credit_Score",
+  "n_rows":50000,
+  "n_features":21,
+  "categorical_features":[
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ]
+}

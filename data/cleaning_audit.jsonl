@@ -151,3 +151,13 @@
 {"time": "2026-02-20T07:34:37.097161", "dataset_id": "d5c703ec", "step": "post_clean_completed", "details": {"remaining_missing": 0.0, "n_features": 20, "mean_variance": 688.5024983975454}}
 {"time": "2026-02-20T07:34:37.119153", "dataset_id": "d5c703ec", "step": "metadata_generated", "details": {"policy_flags": 14, "info_flags": 2}}
 {"time": "2026-02-20T07:34:37.119153", "dataset_id": "d5c703ec", "step": "metadata_saved", "details": {"path": "data\\data_metdata.jsonl"}}
+{"time": "2026-02-20T09:32:08.247758", "dataset_id": "f41d4550", "step": "dataset_loaded", "details": {"file": "absenteeism-data.csv"}}
+{"time": "2026-02-20T09:32:08.329056", "dataset_id": "f41d4550", "step": "unified_diagnostics_completed", "details": {"auto_fixable": 2, "policy_required": 4, "informational": 0}}
+{"time": "2026-02-20T09:32:08.329056", "dataset_id": "f41d4550", "step": "action_failed", "details": {"column": null, "action": "drop_duplicate_rows", "error": "Unknown action: drop_duplicate_rows"}}
+{"time": "2026-02-20T09:32:08.330055", "dataset_id": "f41d4550", "step": "action_failed", "details": {"column": "Absenteeism Time in Hours", "action": "power_transform", "error": "Unknown action: power_transform"}}
+{"time": "2026-02-20T09:32:08.330055", "dataset_id": "f41d4550", "step": "auto_fix_cleaning_executed", "details": {"actions": 2}}
+{"time": "2026-02-20T09:32:08.338097", "dataset_id": "f41d4550", "step": "pre_clean_completed", "details": {"steps": 0}}
+{"time": "2026-02-20T09:32:08.347633", "dataset_id": "f41d4550", "step": "cleaned_dataset_saved", "details": {"path": "data\\absenteeism-data_cleaned_f41d4550.csv"}}
+{"time": "2026-02-20T09:32:08.350666", "dataset_id": "f41d4550", "step": "post_clean_completed", "details": {"remaining_missing": 0.0, "n_features": 12, "mean_variance": 602.9219966511039}}
+{"time": "2026-02-20T09:32:08.362566", "dataset_id": "f41d4550", "step": "metadata_generated", "details": {"policy_flags": 4, "info_flags": 0}}
+{"time": "2026-02-20T09:32:08.364350", "dataset_id": "f41d4550", "step": "metadata_saved", "details": {"path": "data\\absenteeism-data_metdata.jsonl"}}

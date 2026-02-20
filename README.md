@@ -1,0 +1,1 @@
+Rename all the files to data.csv after ingestion before sending it to clean

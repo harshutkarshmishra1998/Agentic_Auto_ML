@@ -7,6 +7,7 @@ requires-python = ">=3.11"
 dependencies = [
     "category-encoders>=2.6.3",
     "feature-engine>=1.7.0",
+    "groq>=1.0.0",
     "imbalanced-learn>=0.12.0",
     "numpy>=1.26.0",
     "openml>=0.14.2",

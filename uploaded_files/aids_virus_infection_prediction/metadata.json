@@ -1,0 +1,32 @@
+{
+  "dataset_id":46076,
+  "name":"AIDS_Virus_Infection_Prediction",
+  "target":null,
+  "n_rows":50000,
+  "n_features":23,
+  "categorical_features":[
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ]
+}
