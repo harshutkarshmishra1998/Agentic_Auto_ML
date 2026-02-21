@@ -18,3 +18,7 @@ class AgentState(TypedDict, total=False):
     # -------- preprocess 1 --------
     preprocess_last_n: Optional[int]
     preprocess_1_result: Optional[List[Dict[str, Any]]]
+
+    # -------- model selector --------
+    model_selector_last_n: Optional[int]
+    model_selection_result: Optional[List[Dict[str, Any]]]

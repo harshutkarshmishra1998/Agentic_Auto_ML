@@ -1,0 +1,2 @@
+from model_selector.pipeline import run_model_selection
+run_model_selection(last_n=1)
