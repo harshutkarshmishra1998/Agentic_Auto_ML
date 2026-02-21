@@ -3,6 +3,7 @@ from langgraph.graph import StateGraph, END
 from agent_state import AgentState
 from schema_engine.langgraph_node import schema_inference_node
 from data_understanding.langgraph_node import data_understanding_node
+from preprocess_1.langgraph_node import preprocess_1_node
 
 from tests.schema_mapping import extract_schema
 from tests.json_printer import print_last_n_role_constants
@@ -28,11 +29,13 @@ def build_graph():
 
     builder.add_node("schema_inference", schema_inference_node)
     builder.add_node("data_understanding", data_understanding_node)
+    builder.add_node("preprocess_1", preprocess_1_node)
 
     builder.set_entry_point("schema_inference")
 
     builder.add_edge("schema_inference", "data_understanding")
-    builder.add_edge("data_understanding", END)
+    builder.add_edge("data_understanding", "preprocess_1")
+    builder.add_edge("preprocess_1", END)
 
     return builder.compile()
 
@@ -48,6 +51,7 @@ if __name__ == "__main__":
         "data_path": DATA_FILE,
         "categorical_columns": cats,
         "target_column": target,
+        "preprocess_last_n": 1
     }
 
     result = graph.invoke(initial_state)
