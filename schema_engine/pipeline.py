@@ -5,7 +5,7 @@ from .profiler import profile_dataframe
 from .deterministic import deterministic_role, Role
 from .ambiguity import is_ambiguous
 from .llm_resolver import resolve_with_llm
-from .exporter import export_schema_result
+from .exporter import export_schema_result, export_user_inputs
 
 
 # --------------------------------------------------
@@ -110,5 +110,7 @@ def run_schema_inference(
     # EXPORT (APPEND MODE)
     # ----------------------------
     export_schema_result(data_path, final_output)
+
+    export_user_inputs(data_path, categorical_columns, target_column)
 
     return final_output

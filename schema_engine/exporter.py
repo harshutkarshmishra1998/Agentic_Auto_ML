@@ -1,5 +1,6 @@
 from pathlib import Path
 import json
+from datetime import datetime
 
 
 def export_schema_result(
@@ -49,3 +50,49 @@ def export_schema_result(
     # ------------------------------
     with open(jsonl_path, "a", encoding="utf-8") as f:
         f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+
+def export_user_inputs(
+    data_path,
+    categorical_columns=None,
+    target_column=None,
+):
+    """
+    Append user schema inputs to project_root/data/user_input.jsonl
+    """
+
+    # ---------------- normalize inputs ----------------
+    data_path = Path(data_path).resolve()
+
+    if categorical_columns is None:
+        categorical_columns = []
+
+    if target_column is None:
+        target_column = []
+    elif isinstance(target_column, str):
+        target_column = [target_column]
+
+    # ---------------- detect project root ----------------
+    # assumes script is somewhere inside project
+    project_root = Path(__file__).resolve().parents[1]
+
+    output_dir = project_root / "data"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    output_file = output_dir / "user_input.jsonl"
+
+    # ---------------- build record ----------------
+    record = {
+        "timestamp": datetime.utcnow().isoformat(),
+        "dataset_name": data_path.name,
+        "dataset_path": str(data_path),
+        "categorical_columns": list(categorical_columns),
+        "target_columns": list(target_column),
+    }
+
+    # ---------------- append JSONL ----------------
+    with output_file.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(record, separators=(",", ":")))
+        f.write("\n")
+
+    print(f"User input appended → {output_file}")
